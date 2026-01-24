@@ -7,7 +7,7 @@
 #+OPTIONS:   H:4 toc:t num:2
 
 #+PROPERTY:  header-args :padline no
-#+SETUPFILE: ~/org/theme-readtheorg.setup
+#+SETUPFILE: ~/org/html-theme-readtheorg.setup
 
 #+html: <a href="http://opensource.org/licenses/GPL-3.0">
 #+html:   <img src="http://img.shields.io/:license-gpl-blue.svg" alt=":license-gpl-blue.svg" />
@@ -15,42 +15,6 @@
 #+html: <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VCVAS6KPDQ4JC&lc=BE&item_number=org%2dhtml%2dthemes&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted">
 #+html:   <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="btn_donate_LG.gif" />
 #+html: </a>
-
-#+begin_quote
-[!TIP]
-
-*** Transform your Emacs experience in Paris from 24 to 28 November 2025!
-Unlock unparalleled productivity with my exclusive "EmacsBoost" course!*
-
-Are you ready to /supercharge your productivity/ and become an unstoppable Emacs
-ninja?  This is the opportunity you've been waiting for!
-
-*What you'll learn:*
-- Expertly master Emacs from the ground up to advanced techniques that set you
-  apart.
-- /Maximize your editing efficiency/ and elevate your workflow to new heights.
-- Personalize Emacs to perfectly fit your unique style and needs.
-- And much more tips and tricks!
-
-*Who should join:*
-
-This course is designed for everyone passionate about Emacs -- from curious
-beginners to seasoned users looking to refine their skills.
-
-*Why choose my course?*
-- Learn from an expert instructor with over 26 years of Emacs mastery.
-- Engage in /dynamic hands-on exercises/ that reinforce and enhance your learning
-  journey.
-- Enjoy /exclusive networking opportunities/ with fellow Emacs enthusiasts who
-  share your passion.
-- Experience personalized guidance tailored just for you.
-
-Seize this exceptional opportunity to elevate your Emacs skills to new levels!
-\\
-
-Visit https://emacsboost.com/en/ for more details, course dates and locations,
-and to /secure your place today/.
-#+end_quote
 
 * Overview
 
@@ -195,6 +159,36 @@ of Org mode syntax.
 Please see the [[https://github.com/fniessen/refcard-org-mode][Org mode refcard]] page for full examples of headings, code,
 admonitions, footnotes, tables and other details.
 
+* Setup files renamed (important notice)
+
+** Change of SETUPFILE names
+
+As of [2026-01-24 Sat], the Org-HTML themes setup files have been *renamed*.
+
+The old names:
+
+- =theme-bigblow.setup=
+- =theme-readtheorg.setup=
+
+are *deprecated* and replaced by:
+
+- =html-theme-bigblow.setup=
+- =html-theme-readtheorg.setup=
+
+** Backward compatibility and warning banner
+
+Org files using the old names still work, but a warning banner is injected into
+the exported HTML page, and a warning is printed in the browser console.
+
+** What you should do
+
+To avoid the warning and ensure future compatibility, update your Org files to
+use the new setup file names.
+
+#+begin_src org :exports code
+,#+SETUPFILE: html-theme-NAME.setup
+#+end_src
+
 * Using a theme
 
 Using a theme from the [[id:79e0ed21-c3b0-4f00-bdab-29fbff9dcad4][theme gallery]] for your own Org documents is very easy:
@@ -206,7 +200,7 @@ Using a theme from the [[id:79e0ed21-c3b0-4f00-bdab-29fbff9dcad4][theme gallery]
    chosen theme:
 
    #+begin_src org :exports code
-   ,#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-NAME.setup
+   ,#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/html-theme-NAME.setup
    #+end_src
 
    (where ~NAME~ is either ~bigblow~ or ~readtheorg~)
@@ -217,7 +211,7 @@ Using a theme from the [[id:79e0ed21-c3b0-4f00-bdab-29fbff9dcad4][theme gallery]
    into the same folder as the file you want to export:
 
    #+begin_src org :exports code
-   ,#+SETUPFILE: PATH/TO/GIT/REPO/org/theme-NAME-local.setup
+   ,#+SETUPFILE: PATH/TO/org/html-theme-NAME-local.setup
    #+end_src
 
 2. Then, you *export* your Org mode file *to HTML* with =org-html-export-to-html= or
@@ -275,7 +269,7 @@ accessible, both as in Belgian beer and as in speech.
 
 * License
 
-Copyright (C) 2011-2025 Fabrice Niessen. All rights reserved.
+Copyright (C) 2011-2026 Fabrice Niessen. All rights reserved.
 
 Author: Fabrice Niessen \\
 Keywords: org-mode html themes
