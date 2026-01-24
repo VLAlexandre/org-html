@@ -191,31 +191,34 @@ use the new setup file names.
 
 * Using a theme
 
-Using a theme from the [[id:79e0ed21-c3b0-4f00-bdab-29fbff9dcad4][theme gallery]] for your own Org documents is very easy:
+Using a theme from the Org HTML [[id:79e0ed21-c3b0-4f00-bdab-29fbff9dcad4][theme gallery]] in your own Org documents is
+straightforward:
 
-1. You *add a* =#+SETUPFILE:= *directive* in the preamble of your document (to include
-   the necessary CSS and JavaScript files).
+1. *Add a =#+SETUPFILE:= directive* in the preamble of your document to include the
+   required CSS and JavaScript files.
 
-   You can either use an URL of the following type for the "setup file" of your
-   chosen theme:
+   - You may reference the setup file directly via GitHub Pages:
 
-   #+begin_src org :exports code
-   ,#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/html-theme-NAME.setup
-   #+end_src
+     #+begin_src org :exports code
+     ,#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/html-theme-NAME.setup
+     #+end_src
 
-   (where ~NAME~ is either ~bigblow~ or ~readtheorg~)
+     where =NAME= is either =bigblow= or =readtheorg=.
 
-   or, if you *cloned or downloaded* the Org-HTML themes project -- to get no
-   dependency on an Internet connection --, use a (relative or absolute) path to
-   the /local/ "setup file" and copy the =src= folder from the cloned folder
-   into the same folder as the file you want to export:
+   - Alternatively, to avoid any dependency on an Internet connection, *clone or
+     download* the =org-html-themes= repository and use the corresponding (relative
+     or absolute path to the) local setup file:
 
-   #+begin_src org :exports code
-   ,#+SETUPFILE: PATH/TO/org/html-theme-NAME-local.setup
-   #+end_src
+     #+begin_src org :exports code
+     ,#+SETUPFILE: PATH/TO/org/html-theme-NAME-local.setup
+     #+end_src
 
-2. Then, you *export* your Org mode file *to HTML* with =org-html-export-to-html= or
-   with =C-c C-e h h=.
+     In that case, the =src/= directory from the repository must be copied into
+     the same directory as the Org file being exported (so that the exported
+     HTML can find the theme assets via relative paths).
+
+2. Finally, *export* the Org file *to HTML* using =org-html-export-to-html= or with
+   =C-c C-e h h=.
 
 * Customizing a theme
 
