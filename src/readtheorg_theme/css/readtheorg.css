@@ -5,12 +5,10 @@ h1,h2,h3,h4,h5,h6,legend{
     font-family:"Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif;
     font-weight:700;
     margin-top:0;
-    color: red;
 }
 
 h1{
     font-size:175%;
-    color: red;
     text-align: left !important;
     margin-bottom: 0.83em !important;
 }
@@ -52,7 +50,7 @@ html{
 }
 
 body{
-    background:#edf0f2;
+    background:#1485d1;
     color:#404040;
     font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
     font-weight:normal;
