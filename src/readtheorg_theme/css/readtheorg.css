@@ -318,7 +318,7 @@ code{
     border:1px solid #e1e4e5;
     padding:12px;
     overflow-x:auto;
-    background:#000000;
+    background:#fff;
     margin:1px 0 24px 0}
 
 pre.src{
@@ -339,6 +339,7 @@ pre, code {
     word-wrap: break-word; /* Ensure long lines break */
 }
 
+/* Pour l'exemple / input */
 .example{
     background:#f3f6f6;
     border:1px solid #e1e4e5;
@@ -940,10 +941,11 @@ footer p{
 #postamble .author {
     font-size: 100%;
     margin-bottom: 0px;
+    font-weight: 500;
 }
 
 #postamble .date {
-    font-size: 90%;
+    font-size: 70%;
     margin-bottom: 0px;
     color: #27AE60;
 }
