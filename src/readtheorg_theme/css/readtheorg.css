@@ -318,7 +318,7 @@ code{
     border:1px solid #e1e4e5;
     padding:12px;
     overflow-x:auto;
-    background:#000000;
+    background:#fff;
     margin:1px 0 24px 0}
 
 pre.src{
@@ -333,10 +333,11 @@ pre.src{
     white-space:pre;
 }
 
-pre,
-code {
+/* Je pense que c'est ici pour changer l'éthéqi */
+pre, code {
     white-space: pre-wrap;
     word-wrap: break-word; /* Ensure long lines break */
+    background-color: #000;
 }
 
 .example{
