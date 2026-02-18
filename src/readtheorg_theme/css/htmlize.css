@@ -3,9 +3,9 @@
    ========================================================================== */
 
 /* --- 1. COLORATION SYNTAXIQUE (Code Source) --- */
-.org-keyword, .keyword           { color: #5f00b3; font-weight: bold; } /* if, else, def, return */
+.org-keyword           { color: #5f00b3; font-weight: bold; } /* if, else, def, return */
 .org-string            { color: #820524; }                    /* "chaînes de caractères" */
-.org-comment, .comment           { color: #2b8100; font-style: italic; } /* // commentaires */
+.org-comment           { color: #2b8100; font-style: italic; } /* // commentaires */
 .org-comment-delimiter { color: #2b8100; font-style: italic; } /* /* */
 .org-function-name     { color: rgb(164, 170, 0); }                       /* nom de fonction */
 .org-variable-name     { color: rgb(0, 183, 183); }                       /* nom de variable */

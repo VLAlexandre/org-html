@@ -318,7 +318,7 @@ code{
     border:1px solid #e1e4e5;
     padding:12px;
     overflow-x:auto;
-    background:#fff;
+    background:#000000;
     margin:1px 0 24px 0}
 
 pre.src{
@@ -337,7 +337,6 @@ pre.src{
 pre, code {
     white-space: pre-wrap;
     word-wrap: break-word; /* Ensure long lines break */
-    background-color: #000;
 }
 
 .example{
