@@ -1,8 +1,10 @@
 # -*- mode: org; -*-
 
 #+OPTIONS: html-style:nil
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://alverlain.isima.pages.fr/orghtmlsetup/src/readtheorg_theme/htmlize.css"/>
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://alverlain.isima.pages.fr/orghtmlsetup/src/readtheorg_theme/readtheorg.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://VLAlexandre.github.io/org-html/src/readtheorg_theme/css/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://VLAlexandre.github.io/org-html/src/readtheorg_theme/css/readtheorg.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://VLAlexandre.github.io/org-html/src/readtheorg_theme/css/code-copy.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://VLAlexandre.github.io/org-html/src/readtheorg_theme/css/search.css"/>
 
 
 #+HTML_HEAD: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
