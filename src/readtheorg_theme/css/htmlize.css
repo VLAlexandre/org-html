@@ -41,7 +41,7 @@
 .org-link-visited { color: #8b008b; text-decoration: underline; }
 
 /* --- 6. TODO, CHECKBOXES ET ÉTATS --- */
-.org-org-todo { color: #ff0000; font-weight: bold; } /* TODO */
+.org-org-todo { color: #ffffff; font-weight: bold; } /* TODO */
 .org-org-done { color: #228b22; font-weight: bold; } /* DONE */
 .org-org-checkbox { font-weight: bold; }
 .org-org-checkbox-statistics-done { color: #228b22; font-weight: bold; } /* [X] */
