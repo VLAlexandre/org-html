@@ -314,12 +314,30 @@ code{
     border:1px solid #e1e4e5;
     margin-bottom:24px}
 
+    /* chnager code/programme */
 .codeblock,pre.src,#content .literal-block{
-    border:1px solid #e1e4e5;
+    border:5px solid #fcfcfc;
+    border-radius: 25px;
     padding:12px;
     overflow-x:auto;
-    background:#fff;
-    margin:1px 0 24px 0}
+    color: white;
+    background:rgba(31,31,31,1);
+    margin:1px 0 24px 0;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+pre.src::-webkit-scrollbar {
+    background: none;
+}
+pre.src::-webkit-scrollbar-thumb {
+    background-color: rgb(31, 31, 31); /* Couleur du curseur */
+    border-radius: 10px;     /* Arrondi */
+    border: 2px dashed #ffffff; /* Crée un petit espace autour du curseur */
+    transition: 0.5s;
+}
+pre.src::-webkit-scrollbar-thumb:hover {
+    border: 2px solid #ffffff; /* Crée un petit espace autour du curseur */
+}
 
 pre.src{
     /* color:#404040; */
@@ -337,7 +355,6 @@ pre.src{
 pre, code {
     white-space: pre-wrap;
     word-wrap: break-word; /* Ensure long lines break */
-    background-color: #000;
 }
 
 /* Pour l'exemple / input */
@@ -765,6 +782,7 @@ hr{
     font-weight:normal}
 
 #table-of-contents a{
+    margin: 0;
     display:inline-block;
     line-height:18px;
     padding:0.4045em 1.618em;
@@ -773,6 +791,7 @@ hr{
     font-size:90%;
     color:#b3b3b3;
     direction: ltr;
+    transition: 0.2s;
 }
 
 #table-of-contents a:hover{
