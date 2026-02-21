@@ -3,7 +3,7 @@
 // read-the-org-search
 
 // Configuration
-const SEARCH_VERSION = "v1.12";
+const SEARCH_VERSION = "v1.12F";
 
 // Default configuration
 window.searchConfig = {
@@ -45,9 +45,9 @@ $(document).ready(function() {
 
   $('#table-of-contents').prepend(`
     <div id="search-container">
-      <label for="search-input" class="sr-only">Search document</label>
-      <input type="text" id="search-input" placeholder="Search..." aria-describedby="search-description">
-      <div id="search-description" class="sr-only">Type to search the document. Use arrow keys to navigate results.</div>
+      <label for="search-input" class="sr-only">Rechercher dans le document</label>
+      <input type="text" id="search-input" placeholder="Rechercher..." aria-describedby="search-description">
+      <div id="search-description" class="sr-only">Tapez pour rechercher dans le document. Utilisez les touches fléchées pour parcourir les résultats.</div>
       <ul id="search-results" role="listbox" aria-label="Search results"></ul>
     </div>
   `);
@@ -65,7 +65,7 @@ $(document).ready(function() {
       const text = element.text().trim();
       if (text) {
         searchIndex.push({
-          text: text.toLowerCase(),
+          text: text,
           element: element,
           type: element.prop('tagName').toLowerCase()
         });
@@ -107,14 +107,14 @@ $(document).ready(function() {
     searchResults.show();
 
     if (searchTerm.length < 3) {
-      searchResults.html('<li>Please enter at least 3 characters</li>');
+      searchResults.html('<li>Veuillez saisir au moins 3 caractères.</li>');//Je l'ai mis en français : Please enter at least 3 characters
       return;
     }
 
     const matches = searchIndex.filter(item => item.text.includes(searchTerm));
 
     if (matches.length === 0) {
-      searchResults.append('<li>No results found</li>');
+      searchResults.append('<li>Aucun résultat trouvé</li>');
       return;
     }
 
