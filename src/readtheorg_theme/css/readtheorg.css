@@ -5,12 +5,19 @@ h1,h2,h3,h4,h5,h6,legend{
     font-family:"Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif;
     font-weight:700;
     margin-top:0;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 
 h1{
     font-size:175%;
+    padding: 5px;
     text-align: left !important;
     margin-bottom: 0.83em !important;
+    border: 6px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .subtitle{
@@ -19,10 +26,16 @@ h1{
 
 h2{
     font-size:150%;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h3{
     font-size:125%;
+    border-bottom: 1px solid black;
 }
 
 h4{
