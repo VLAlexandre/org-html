@@ -5,12 +5,6 @@
  */
 
 
-
-/* Container positioning */
-.org-left {/* J'ai un vieux truc table moche dans kss donc remove */
-    display: none;
-}
-
 b { /*C'est strong / gras / emphi*/
     color: #2980B9;
     font-weight: 700;
