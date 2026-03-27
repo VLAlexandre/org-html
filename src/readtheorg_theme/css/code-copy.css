@@ -4,7 +4,12 @@
  * La couleur principale #2980B9  et rgb(41 128 185)
  */
 
+ /* Disabling search because it's absolute garbage */
+.search-container {
+    display: none;
+}
 
+ 
 #table-of-contents > h2 {
     margin-top: 0;
 }

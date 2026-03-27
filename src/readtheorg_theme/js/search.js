@@ -37,7 +37,6 @@ $(document).ready(function() {
 
   const ENABLE_SEARCH = window.searchConfig.enableSearch;
   const SEARCH_RESULT_LIMIT = window.searchConfig.searchResultLimit;
-
   if (!ENABLE_SEARCH) {
     console.log('Search functionality is disabled');
     return;
@@ -92,7 +91,13 @@ $(document).ready(function() {
     const regex = new RegExp(`(${term})`, 'gi');
     return text.replace(regex, '<mark>$1</mark>');
   }
+//   function highlightText(text, term) {//Modified to not alter links
+//     if (!term) return text;//Always capture
 
+//     const regex = new RegExp(`(${term})(?![^<]*>)`, 'gi');//If a > is ahead
+    
+//     return text.replace(regex, '<mark>$1</mark>');
+// }
   function performSearch() {
     const searchTerm = searchInput.val().toLowerCase();
     searchResults.empty();
@@ -111,7 +116,8 @@ $(document).ready(function() {
       return;
     }
 
-    const matches = searchIndex.filter(item => item.text.includes(searchTerm));
+    const regex = new RegExp(searchTerm, 'i');//search avec case
+    const matches = searchIndex.filter(item => regex.test(item.text));//meilleur search du coup
 
     if (matches.length === 0) {
       searchResults.append('<li>Aucun résultat trouvé</li>');
