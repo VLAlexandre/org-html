@@ -5,7 +5,7 @@
  */
 
  /* Disabling search because it's absolute garbage */
-.search-container {
+#search-container {
     display: none;
 }
 
