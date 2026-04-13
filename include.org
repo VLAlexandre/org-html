@@ -1,0 +1,9 @@
+#+Author: Alexandre VERLAIN
+#+PROPERTY: header-args :exports both
+#+OPTIONS: html-htmlize-output-type:cs
+
+#+begin_comment
+#+SETUPFILE: https://VLAlexandre.github.io/org-html/org/html-theme-readtheorg.setup
+#+end_comment
+
+#+SETUPFILE: ../html-theme-readtheorg-local.setup
