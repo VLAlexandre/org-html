@@ -1,0 +1,18 @@
+#+begin_export html
+<div class="navbutton">
+    <a href="../../index.html" class"navLien">Lobby des rapports></a>
+</div>
+
+<style>
+    .navbutton {
+        margin-bottom:20px;
+    }
+    .navLien{
+        padding: 10px 15px;
+        background-color:#007bc8;
+        color:white;
+        border-radius:5px;
+        font-family:sans-sherif;
+    }
+</style>
+#+end_export
