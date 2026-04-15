@@ -1,18 +1,35 @@
 #+begin_export html
 <div class="navbutton">
-    <a href="../../index.html" class"navLien">Lobby des rapports></a>
+    <a href="../../index.html" class="navLien">Lobby des rapports</a>
 </div>
 
 <style>
     .navbutton {
-        margin-bottom:20px;
-    }
-    .navLien{
-        padding: 10px 15px;
-        background-color:#007bc8;
+        margin-left:auto;
+        background-color: rgb(41,128,185);
+        width: 10%;
+        display:flex;
+        justify-content:center;
+        align-items:right;
+        position:sticky;
+        left:0;
+        top:20px;
+        bottom:0;
         color:white;
+        width: fit-content;
         border-radius:5px;
-        font-family:sans-sherif;
+	z-index:9999;
+    }
+
+    .navLien {
+        padding: 10px 15px;
+        color:white;
+        font-family:sans-serif;
+        text-decoration:underline;
+        transition:0.2s;
+    }
+    .navLien:hover {
+        color:black;
     }
 </style>
 #+end_export
