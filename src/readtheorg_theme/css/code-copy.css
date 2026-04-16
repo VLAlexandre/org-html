@@ -5,7 +5,11 @@
  */
 
 
-
+.accimg {
+   display:block;
+   margin:0 auto;
+   width:20vw;
+}
  
 #table-of-contents > h2 {
     margin-top: 0;

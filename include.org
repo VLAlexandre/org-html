@@ -3,7 +3,9 @@
 #+OPTIONS: html-htmlize-output-type:cs
 
 #+begin_comment
-#+SETUPFILE: ../html-theme-readtheorg-local.setup
+#+SETUPFILE: https://VLAlexandre.github.io/org-html/org/html-theme-readtheorg.setup
 #+end_comment
 
-#+SETUPFILE: https://VLAlexandre.github.io/org-html/org/html-theme-readtheorg.setup
+#+SETUPFILE: "~/Public/ORG HTML/org/html-theme-readtheorg-local.setup"
+
+

@@ -31,5 +31,11 @@
     .navLien:hover {
         color:black;
     }
+    .navLien:visited {
+       color:yellow;
+    }
+    .navLien:visited:hover{
+    color:black;
+    }
 </style>
 #+end_export
