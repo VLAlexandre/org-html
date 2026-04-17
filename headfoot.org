@@ -1,0 +1,5 @@
+#+include: "~/Bureau/DEV Linux/header.html" export html
+#+HTML_HEAD: <link rel="stylesheet" href="../../header.css">
+#+include: "~/Bureau/DEV Linux/footer.html" export html
+#+HTML_HEAD: <link rel="stylesheet" href="../../footer.css">
+#+HTML_HEAD: <link rel="stylesheet" href="../../headfootfix.css">

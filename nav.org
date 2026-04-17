@@ -1,41 +1,100 @@
 #+begin_export html
 <div class="navbutton">
-    <a href="../../index.html" class="navLien">Lobby des rapports</a>
+    <a href="../../index.html" class="navLien">
+        <img src="../../Images/home.png" alt="Accueil" class="homeimg">
+    </a>
 </div>
 
 <style>
-    .navbutton {
-        margin-left:auto;
-        background-color: rgb(41,128,185);
-        width: 10%;
-        display:flex;
-        justify-content:center;
-        align-items:right;
-        position:sticky;
-        left:0;
-        top:20px;
-        bottom:0;
-        color:white;
-        width: fit-content;
-        border-radius:5px;
-	z-index:9999;
-    }
+.navbutton {
+    position: sticky;
+    top: 20px;
+    left: 20px;
+    bottom:20px;
 
-    .navLien {
-        padding: 10px 15px;
-        color:white;
-        font-family:sans-serif;
-        text-decoration:underline;
-        transition:0.2s;
+    width: 70px;
+    height: 70px;
+    
+    #content:has(header) {
+     margin-bottom:-63px;
+     margin-top:0px;
     }
-    .navLien:hover {
-        color:black;
+    
+    margin-top:20px;
+    margin-bottom:-63px;
+    
+    background: linear-gradient(135deg, #2980b9, #3498db);
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    cursor: pointer;
+    z-index: 9999;
+    margin-left:auto;
+    
+    order:-2;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navbutton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.navbutton:active {
+    transform: scale(0.95);
+}
+
+.homeimg {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.navLien {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.navbutton::after {
+    content: "Accueil";
+    position: absolute;
+    bottom: 70px;
+    background: rgba(0,0,0,0.75);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.navbutton:hover::after {
+    opacity: 1;
+}
+
+/* Mobile */
+@media (max-width:768px) {
+    .navbutton {
+        top: 70px;
+        width: 60px;
+        height: 60px;
+         margin-top:60px;
+    margin-bottom:-103px;
+        order:-1;
     }
-    .navLien:visited {
-       color:yellow;
-    }
-    .navLien:visited:hover{
-    color:black;
-    }
+}
+
+h1 {
+width: calc(100% - 80px);
+}
 </style>
 #+end_export
