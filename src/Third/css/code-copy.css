@@ -4,6 +4,10 @@
  * La couleur principale #2980B9  et rgb(41 128 185)
  */
 
+* {
+outline: 1px solid red !important;
+}
+
 
 .accimg {
    display:block;

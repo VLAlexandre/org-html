@@ -1,0 +1,15 @@
+# -*- mode: org; -*-
+
+#+OPTIONS: html-style:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="file:///home/user/Public/ORG HTML/src/Third/css/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="file:///home/user/Public/ORG HTML/src/Third/css/readtheorg.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="file:///home/user/Public/ORG HTML/src/Third/css/search.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="file:///home/user/Public/ORG HTML/src/Third/css/code-copy.css"/>
+
+
+#+HTML_HEAD: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+#+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="file:///home/user/Public/ORG HTML/src/lib/js/jquery.stickytableheaders.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="file:///home/user/Public/ORG HTML/src/Third/js/search.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="file:///home/user/Public/ORG HTML/src/Third/js/readtheorg.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="file:///home/user/Public/ORG HTML/src/Third/js/code-copy.js"></script>i
