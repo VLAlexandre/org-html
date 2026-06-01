@@ -1,0 +1,257 @@
+@use "sass:color";
+
+// ==========================================================================
+// 1. VARIABLES
+// ==========================================================================
+$font-sans:     "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$font-mono:     "JetBrains Mono", Fira Code, Monaco, monospace;
+
+$color-bg:      #24292f;
+$color-text:    #ffffff; 
+$color-muted:   #a9b8c9;
+$color-primary: #58a6ff; // Bleu plus clair (style GitHub Dark) pour le contraste sur fond sombre
+$color-border:  rgba(255, 255, 255, 0.15);
+$color-toc-bg:  #1f2428; // Légèrement plus sombre que le BG pour bien détacher la sidebar
+
+$space-sm:       0.5rem;
+$space-md:       10px;
+$space-lg:       20px;
+
+$toc-width:      280px;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// ==========================================================================
+// 2. STRUCTURE GLOBALE & MISE EN PAGE
+// ==========================================================================
+body {
+  font-family: $font-sans;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $color-text;
+  background-color: $color-bg;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; // Sécurité anti-scroll horizontal
+}
+
+// Conteneur principal généré par Org
+#content {
+  box-sizing: border-box;
+  margin-left: $toc-width; // Laisse la place pour la TOC fixe à gauche
+  padding: 0 0 $space-lg 0; // Géré par le titre et le postamble
+}
+
+// Gère le texte sous le grand titre pour qu'il ne colle pas aux bords
+.outline-2, .outline-3, .outline-4, p, table, .org-src-container, blockquote {
+  max-width: 900px; // Largeur max de lecture confortable
+  margin-left: calc(#{$space-lg} * 2);
+  margin-right: calc(#{$space-lg} * 2);
+}
+
+#org-div-home-and-up {
+  display: none;
+}
+
+#postamble {
+  margin-top: calc(#{$space-lg} * 2);
+  padding: $space-lg;
+  border-top: 1px solid $color-border;
+  font-size: 0.85rem;
+  color: $color-muted;
+  text-align: center;
+}
+
+// ==========================================================================
+// 3. TYPOGRAPHIE & TITRE BANDEAU
+// ==========================================================================
+
+// Le titre principal prend toute la largeur disponible à droite de la TOC
+h1.title {
+  @include flex-center;
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: calc(#{$space-lg} * 2);
+  padding: 40px $space-lg;
+  
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  text-align: center;
+  word-break: break-word;
+  
+  background: $color-text;
+  color: $color-bg;
+}
+
+h2, h3, h4, h5, h6 {
+  color: $color-text;
+  font-weight: 600;
+  margin-top: calc(#{$space-lg} * 2);
+  margin-bottom: $space-md;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 1.75rem;
+  border-bottom: 1px solid $color-border;
+  padding-bottom: $space-sm;
+  margin-left: calc(#{$space-lg} * 2); // Aligné avec le reste du texte
+}
+
+h3 { font-size: 1.4rem; }
+h4 { font-size: 1.2rem; }
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul, ol {
+  padding-left: calc(#{$space-md} * 2.5);
+  margin-bottom: $space-md;
+  
+  li {
+    margin-bottom: calc(#{$space-sm} / 2);
+  }
+}
+
+blockquote {
+  padding: $space-sm $space-md;
+  color: $color-muted;
+  border-left: 4px solid $color-primary;
+  background-color: color.scale($color-bg, $lightness: 4%);
+  p:last-child { margin-bottom: 0; }
+}
+
+// ==========================================================================
+// 4. LES TABLEAUX ORG
+// ==========================================================================
+table {
+  border-collapse: collapse;
+  margin: $space-lg 0;
+  font-size: 0.95rem;
+  border: 1px solid $color-border;
+  
+  th, td {
+    padding: 10px 12px;
+    border: 1px solid $color-border;
+    text-align: left;
+  }
+  
+  th {
+    background-color: color.scale($color-bg, $lightness: -15%);
+    font-weight: 600;
+  }
+  
+  tr:nth-child(even) {
+    background-color: color.scale($color-bg, $lightness: 3%);
+  }
+}
+
+// ==========================================================================
+// 5. TABLE DES MATIÈRES (TOC FIXE À GAUCHE)
+// ==========================================================================
+#table-of-contents {
+  box-sizing: border-box;
+  position: fixed; // Plus propre que sticky + marges négatives forcées
+  left: 0;
+  top: 0;
+  width: $toc-width;
+  height: 100vh;
+  overflow-y: auto; // Permet de scroller dans la TOC si elle est très longue
+  
+  background-color: $color-toc-bg;
+  border-right: 1px solid $color-border;
+  padding: calc(#{$space-lg} * 1.5) $space-md;
+  margin: 0;
+
+  h2 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $color-muted;
+    border-bottom: 1px solid $color-border;
+    margin: 0 0 $space-md 0;
+    padding-bottom: $space-sm;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: $space-sm;
+    margin-bottom: 0;
+    
+    li {
+      margin-top: $space-md;
+      font-size: 0.9rem;
+      
+      a {
+        color: $color-muted;
+        transition: color 0.2s ease;
+        &:hover {
+          color: $color-primary;
+          text-decoration: none;
+        }
+      }
+    }
+    
+    // Sous-sections dans la TOC
+    ul {
+      padding-left: $space-md;
+    }
+  }
+}
+
+// ==========================================================================
+// 6. BLOCS DE CODE (Préservation fniessen)
+// ==========================================================================
+.org-src-container {
+  margin: $space-md 0;
+  
+  pre.src {
+    border-radius: 6px;
+    padding: $space-md !important;
+    overflow-x: auto;
+    font-family: $font-mono;
+    font-size: 0.9rem;
+    border: 1px solid $color-border;
+  }
+}
+
+// ==========================================================================
+// 7. RESPONSIVE (Pour mobile et tablettes)
+// ==========================================================================
+@media (max-width: 1024px) {
+  #table-of-contents {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    border-right: none;
+    border-bottom: 1px solid $color-border;
+    padding: $space-lg;
+  }
+
+  #content {
+    margin-left: 0;
+  }
+
+  h1.title {
+    font-size: 2rem;
+    padding: 30px $space-md;
+  }
+
+  .outline-2, .outline-3, .outline-4, p, table, .org-src-container, blockquote, h2 {
+    margin-left: $space-md;
+    margin-right: $space-md;
+  }
+}

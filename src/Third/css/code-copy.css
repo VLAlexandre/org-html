@@ -5,7 +5,7 @@
  */
 
 * {
-outline: 1px solid red !important;
+outline: 0px solid red !important;
 }
 
 
@@ -14,32 +14,13 @@ outline: 1px solid red !important;
    margin:0 auto;
    width:20vw;
 }
- 
-#table-of-contents > h2 {
-    margin-top: 0;
-}
-
-b,strong { /*C'est strong / gras / emphi*/
-    color: #000000;
-    font-weight: 650;
-}
-
-.org-src-container {
-    position: relative;
-}
-
-pre.src {
-    position: relative;
-    border-radius: 12px;
-}
 
 /* Copy button styling */
 .copy-code-button {
     position: absolute;
-    top: 5px;
-    right: 5px;
-    padding: 4px 10px;
-    margin: 10px;
+    top: 8px;
+    right: 10px;
+    padding: 4px 10px;/* hauteur largeur */
     font-size: 12px;
     font-weight: 500;
     line-height: 1.4;
